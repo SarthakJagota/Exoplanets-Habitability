@@ -1,52 +1,118 @@
-# Exoplanets-Habitability
-🌍 Exoplanet Habitability 
+# 🪐 Exoplanet Habitability Prediction System
 
-A machine learning-based project for predicting the potential habitability of exoplanets based on their observed features. The goal is to assist in prioritizing exoplanets for further observational studies in the search for potentially life-supporting worlds.
-📖 Overview
+A Machine Learning powered web application that predicts whether an exoplanet is potentially habitable based on astrophysical and stellar parameters.
 
-With thousands of exoplanets discovered to date, determining which of these could harbor life is a key challenge in modern astrophysics. This project leverages machine learning techniques to classify exoplanets as potentially habitable or non-habitable based on a variety of planetary and stellar parameters.
+Built using Scikit-Learn and deployed with Streamlit.
 
-The project uses publicly available exoplanet datasets and applies data preprocessing, feature engineering, and model training to make habitability predictions.
+---
 
-🪐 Data
+## 🚀 Project Overview
 
-The dataset used for this project includes observed features such as:
+This project uses a Random Forest Classifier trained on a cleaned NASA Exoplanet dataset to classify planets as:
 
-    Planetary mass
+- 🌍 Habitable
+- ☄️ Non-Habitable
 
-    Radius
+The model analyzes planetary mass, radius, orbital properties, and stellar characteristics to make predictions.
 
-    Orbital period
+This is a predictive ML system and not an astronomical confirmation.
 
-    Surface temperature
+---
 
-    Host star type
+## 🧠 Machine Learning Pipeline
 
-    Distance from host star (semi-major axis)
+- Data Cleaning & Missing Value Handling
+- Feature Selection
+- Train-Test Split (Stratified)
+- Random Forest with Class Balancing
+- Model Evaluation
+- Model Serialization using Joblib
+- Streamlit Deployment
 
-    Host star luminosity
+---
 
-The primary data source is NASA Exoplanet Archive / The Habitable Exoplanets Catalog.
-🛠️ Technologies & Tools
+## 📊 Features Used
 
-    Python 3.11+
+- Planet Mass
+- Planet Radius
+- Orbital Period
+- Semi Major Axis
+- Equilibrium Temperature
+- Stellar Mass
+- Stellar Radius
+- Stellar Temperature
 
-    Pandas, NumPy
+---
 
-    Scikit-learn
+## 🛠 Tech Stack
 
-    AdaBoost / Random Forest / K-Nearest Neighbors
+- Python
+- Pandas
+- NumPy
+- Scikit-Learn
+- Streamlit
+- Joblib
 
-    Matplotlib, Seaborn
+---
 
-    Jupyter Notebook
+## 📦 Installation
 
-📊 Model Performance
+Clone the repository:
 
-The final classification model achieves:
+```bash
+git clone https://github.com/your-username/exoplanet-habitability.git
+cd exoplanet-habitability
+```
 
-     Random Forest - 99.6 %
-     AdaBoost - 100 %
-     KNN - 98.6 %
+Create virtual environment (optional but recommended):
 
-   
+```bash
+python -m venv venv
+source venv/bin/activate     # Mac/Linux
+venv\Scripts\activate        # Windows
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Run the Application
+
+```bash
+streamlit run app.py
+```
+
+The app will launch in your browser.
+
+---
+
+## 📁 Project Structure
+
+```
+├── app.py
+├── exoplanet_model.pkl
+├── scaler.pkl (if used)
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 📈 Future Improvements
+
+- Add Feature Importance Visualization
+- Hyperparameter Tuning
+- Deploy on Streamlit Cloud / AWS
+- Add SHAP Explainability
+
+---
+
+## 👨‍💻 Author
+
+Sarthak  
+
+Machine Learning | Data Science | Astronomy Applications
